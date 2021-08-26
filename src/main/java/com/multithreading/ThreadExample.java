@@ -24,6 +24,8 @@ public class ThreadExample {
 
         Thread thread = new Thread(ThreadExample::secondThread);
         thread.start();
+        int threadPriority = thread.getPriority();
+        log.info("thread priority: " + threadPriority);
 
         elapsedTimeMainThread();
 
@@ -33,6 +35,14 @@ public class ThreadExample {
         );
         thread1.start();
         thread1.setPriority(Thread.MIN_PRIORITY);
+
+        //obsługa wyjątku w utworzonym watku
+        thread1.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+            @Override
+            public void uncaughtException(Thread t, Throwable e) {
+                log.info("Thread " + t.getName() + " unhandled exeption thrown: " + e.getMessage());
+            }
+        });
 }
 
     private static void elapsedTimeMainThread() throws InterruptedException {
