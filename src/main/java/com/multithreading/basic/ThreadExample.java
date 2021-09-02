@@ -1,4 +1,4 @@
-package com.multithreading;
+package com.multithreading.basic;
 
 import lombok.extern.slf4j.Slf4j;
 
