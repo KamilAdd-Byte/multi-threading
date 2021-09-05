@@ -13,7 +13,7 @@ public class Test {
          * @deprecated New object in parameters Thread.
          */
         Thread thread = new Thread(new CustomRunnable());
-        thread.setPriority(10);
+        thread.setPriority(1);
         thread.start();
 
         Thread thread1 = new CustomThread();
