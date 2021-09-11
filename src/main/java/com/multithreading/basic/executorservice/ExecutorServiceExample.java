@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 @Slf4j
-public class ExecutorService implements Runnable {
+public class ExecutorServiceExample implements Runnable {
 
     ArraysPeople people = new ArraysPeople();
 
