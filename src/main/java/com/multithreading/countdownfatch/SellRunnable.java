@@ -16,6 +16,7 @@ public class SellRunnable implements Runnable{
     @Override
     public void run() {
         sell();
+        countDownLatch.countDown();
     }
 
     private void sell(){

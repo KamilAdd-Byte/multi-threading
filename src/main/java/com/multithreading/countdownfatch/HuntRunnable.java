@@ -16,6 +16,7 @@ public class HuntRunnable implements Runnable{
     @Override
     public void run() {
         hunt();
+        countDownLatch.countDown();
     }
     private void hunt(){
         log.info(" Character from the thread: " + Thread.currentThread().getName() + " is hunting");

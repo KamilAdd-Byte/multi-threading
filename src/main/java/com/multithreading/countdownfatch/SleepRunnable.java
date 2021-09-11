@@ -17,6 +17,7 @@ public class SleepRunnable implements Runnable{
     @Override
     public void run() {
         sleep();
+        countDownLatch.countDown();
     }
 
     private void sleep(){
