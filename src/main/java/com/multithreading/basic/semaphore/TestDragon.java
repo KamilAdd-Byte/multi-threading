@@ -9,7 +9,10 @@ public class TestDragon {
         ExecutorService executorService = Executors.newFixedThreadPool(4);
 
         for (int i = 0;i < 4;i++){
-           executorService.submit(()-> dragon.tryToEnter());
+           executorService.submit(()-> {
+               dragon.tryToEnter();
+               dragon.leaveToGame();
+           });
         }
     }
 }
