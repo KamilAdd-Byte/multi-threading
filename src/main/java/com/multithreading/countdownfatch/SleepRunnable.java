@@ -19,7 +19,7 @@ public class SleepRunnable implements Runnable{
         log.info("Enter to sleep! " + Thread.currentThread().getName());
         sleep();
         countDownLatch.countDown();//wywołania obniza licznik (3) o jeden.
-
+        log.info("Leaving the sleep! " + Thread.currentThread().getName());
     }
 
     private void sleep(){

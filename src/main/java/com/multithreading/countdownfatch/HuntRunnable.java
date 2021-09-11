@@ -18,6 +18,7 @@ public class HuntRunnable implements Runnable{
         log.info("Enter to hunt! " + Thread.currentThread().getName());
         hunt();
         countDownLatch.countDown();//wywołania obniza licznik (3) o jeden.
+        log.info("Leaving the hunt! " + Thread.currentThread().getName());
     }
     private void hunt(){
         log.info(" Character from the thread: " + Thread.currentThread().getName() + " is hunting");
