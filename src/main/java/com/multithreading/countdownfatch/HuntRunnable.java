@@ -15,8 +15,9 @@ public class HuntRunnable implements Runnable{
 
     @Override
     public void run() {
+        log.info("Enter to hunt! " + Thread.currentThread().getName());
         hunt();
-        countDownLatch.countDown();
+        countDownLatch.countDown();//wywołania obniza licznik (3) o jeden.
     }
     private void hunt(){
         log.info(" Character from the thread: " + Thread.currentThread().getName() + " is hunting");

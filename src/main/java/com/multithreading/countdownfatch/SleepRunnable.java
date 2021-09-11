@@ -16,8 +16,10 @@ public class SleepRunnable implements Runnable{
 
     @Override
     public void run() {
+        log.info("Enter to sleep! " + Thread.currentThread().getName());
         sleep();
-        countDownLatch.countDown();
+        countDownLatch.countDown();//wywołania obniza licznik (3) o jeden.
+
     }
 
     private void sleep(){
