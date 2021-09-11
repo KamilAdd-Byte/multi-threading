@@ -5,11 +5,11 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.CountDownLatch;
 
 @Slf4j
-public class SellHunt implements Runnable{
+public class SellRunnable implements Runnable{
 
     private CountDownLatch countDownLatch;
 
-    public SellHunt(CountDownLatch countDownLatch) {
+    public SellRunnable(CountDownLatch countDownLatch) {
         this.countDownLatch = countDownLatch;
     }
 
