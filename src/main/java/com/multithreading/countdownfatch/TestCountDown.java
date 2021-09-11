@@ -5,6 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 @Slf4j
 public class TestCountDown {
     public static void main(String[] args) {
@@ -22,6 +25,12 @@ public class TestCountDown {
         tasks.add(new HuntRunnable(countDownLatch));
         tasks.add(new SellRunnable(countDownLatch));
         tasks.add(new SleepRunnable(countDownLatch));
+
+        ExecutorService executorService = Executors.newFixedThreadPool(3);
+
+        for (Runnable task : tasks) {
+            executorService.execute(task);
+        }
 
         try {
             countDownLatch.await();

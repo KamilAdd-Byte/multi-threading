@@ -18,6 +18,7 @@ public class SellRunnable implements Runnable{
         log.info("Enter to sell! " + Thread.currentThread().getName());
         sell();
         countDownLatch.countDown();//wywołania obniza licznik (3) o jeden.
+        log.info("Leaving the sell! " + Thread.currentThread().getName());
     }
 
     private void sell(){
