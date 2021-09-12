@@ -7,5 +7,4 @@ public class ThreadID {
     public static int get (){
         return Integer.parseInt(Thread.currentThread().getName());
     }
-
 }

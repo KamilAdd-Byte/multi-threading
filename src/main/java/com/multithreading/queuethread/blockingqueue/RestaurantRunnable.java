@@ -1,7 +1,6 @@
-package com.multithreading.blockingqueue;
+package com.multithreading.queuethread.blockingqueue;
 
 import lombok.extern.slf4j.Slf4j;
-
 import java.util.concurrent.BlockingQueue;
 
 @Slf4j
@@ -15,7 +14,6 @@ public class RestaurantRunnable implements Runnable{
 
     @Override
     public void run() {
-
         while (true){
             try {
                 String orderToGive = orderQueue.take();

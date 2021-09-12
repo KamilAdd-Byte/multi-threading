@@ -1,0 +1,11 @@
+Rodzaje wątków:
+- User Thread
+- Daemon Thread
+
+Daemon Thread używać gdy:
+- Dla każdego zadania, które nie powinno blokować aplikacji przed jej zatrzymaniem (mało ważne zadania)
+- Dla kodu, którym bezpośrednio nie zarządzamy (biblioteka zewnętrzna)
+- Zwalnianie pamięci, czyszczenie cache itd
+
+
+>>>>>>>>>>>>>>>.    thread.setDaemon(true);    .<<<<<<<<<<<<<<<<<<<<<<<<<<,

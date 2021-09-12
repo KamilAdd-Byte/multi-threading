@@ -1,0 +1,39 @@
+Kolejki bezpieczne wątkowo:
+a) countdownlatch -
+
+CountDownLatch(3) - liczba określajaca ile operacji trzeba wykonać,żeby dane wątki mogły pracować dalej.
+
+        CountDownLatch countDownLatch = new CountDownLatch(3);
+
+Implementacja:
+
+public class SleepRunnable implements Runnable{
+
+    private final CountDownLatch countDownLatch;
+
+    public SleepRunnable(final CountDownLatch countDownLatch){
+        this.countDownLatch = countDownLatch;
+    }
+
+    @Override
+    public void run() {                         <---  metoda interfejsu runnable, wywołanie metody
+        sleep();
+        countDownLatch.countDown();             <---  wywołanie obniża licznik (3) o jeden.
+    }
+
+    private void sleep(){                       <--- metoda sleep
+        try {
+            Thread.sleep(5000);                 <--- uśpienie działania wątku na 5 sekund
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+
+b) blockingqueue -
+
+
+
+c) delayqueue - bezpieczna wątkowo

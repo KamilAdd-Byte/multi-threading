@@ -1,4 +1,4 @@
-package com.multithreading.countdownfatch;
+package com.multithreading.queuethread.countdownfatch;
 
 import lombok.extern.slf4j.Slf4j;
 

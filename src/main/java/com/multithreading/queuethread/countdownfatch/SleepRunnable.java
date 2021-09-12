@@ -1,4 +1,4 @@
-package com.multithreading.countdownfatch;
+package com.multithreading.queuethread.countdownfatch;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,12 +7,11 @@ import java.util.concurrent.CountDownLatch;
 @Slf4j
 public class SleepRunnable implements Runnable{
 
-    private CountDownLatch countDownLatch;
+    private final CountDownLatch countDownLatch;
 
-    public SleepRunnable(CountDownLatch countDownLatch){
+    public SleepRunnable(final CountDownLatch countDownLatch){
         this.countDownLatch = countDownLatch;
     }
-
 
     @Override
     public void run() {
