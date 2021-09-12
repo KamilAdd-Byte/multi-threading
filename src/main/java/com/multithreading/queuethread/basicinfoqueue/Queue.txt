@@ -36,4 +36,4 @@ b) blockingqueue -
 
 
 
-c) delayqueue - bezpieczna wątkowo
+c) delayqueue - bezpieczna wątkowo, musi być spełniony warunek!
