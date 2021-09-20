@@ -8,7 +8,7 @@ public class CalculatedPersonalDataDto {
     private long amountOfLongName;
 
 
-    public  void add (CalculatedPersonalDataDto calculatedPersonalDataDto){
+    public void add (CalculatedPersonalDataDto calculatedPersonalDataDto){
         this.setAmountOfFemales(this.getAmountOfFemales() + calculatedPersonalDataDto.getAmountOfFemales());
         this.setAmountOfLongName(this.getAmountOfLongName() + calculatedPersonalDataDto.amountOfLongName);
         this.setAmountOfMales(this.getAmountOfMales() + calculatedPersonalDataDto.amountOfFemales);

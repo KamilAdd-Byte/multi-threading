@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class PersonalDataService {
+
     public CalculatedPersonalDataDto getCalculatedPersonalData(String filePath){
         try(BufferedReader reader = new BufferedReader(new FileReader(filePath))){
             return readAndCalculateLine(reader);
@@ -22,6 +23,7 @@ public class PersonalDataService {
         while (line != null) {
             calculatedPersonalDataDto.calculateLine(line);
             line = reader.readLine();
+
         }
         return calculatedPersonalDataDto;
     }
